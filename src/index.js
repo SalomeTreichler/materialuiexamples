@@ -12,12 +12,17 @@ const theme = createMuiTheme({
         }
     },
     typography: {
-        fontFamily: ['Krub', 'sans-serif'].join(',')
+        fontFamily: ['Krub', 'sans-serif'].join(','),
+        h6: {
+            fontFamily: ['Saira', 'sans-serif'].join(','),
+            marginLeft: 10
+        }
     }
 })
 
 ReactDOM.render(
     <MuiThemeProvider theme={theme}>
+        {console.log(theme)}
         <App />
     </MuiThemeProvider>,
     document.getElementById('root')

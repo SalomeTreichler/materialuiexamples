@@ -9,6 +9,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+
+import Logo from '../../logo.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,13 +58,13 @@ export default function ElevateAppBar(props) {
       <ElevationScroll {...props}>
         <AppBar>
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
+          <Avatar alt="Remy Sharp" src={Logo} className={classes.bigAvatar} />
             <Typography variant="h6" className={classes.title}>
-              News
+              NOA
           </Typography>
-            <Button color="inherit">Login</Button>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              <i class="fab fa-buromobelexperte fa-lg"></i>
+            </IconButton>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
